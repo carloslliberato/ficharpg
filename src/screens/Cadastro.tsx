@@ -71,7 +71,7 @@ export function Cadastro() {
                     {erro && <p>{erro}</p>}
                     <button type="submit">CADASTRAR</button>
 
-                    <Link to='/login' className="link">Já possui uma conta? Entre</Link>
+                    <Link to='/' className="link">Já possui uma conta? Entre</Link>
 
                 </form>
             </div>

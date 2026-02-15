@@ -1,0 +1,38 @@
+.menu-bar {
+  width: 95%;
+  height: 60px;
+  background: #1b1b1b;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+
+  color: white;
+  border: solid 2px #5E4A9E;
+  border-radius: 20px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: 0;
+  margin-bottom: 10px;
+  z-index: 999;
+}
+
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 6px;
+  transition: 0.2s;
+}
+
+.menu-links a:hover {
+  color: #A347FF;
+}

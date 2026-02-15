@@ -12,7 +12,7 @@ export function RotaProtegida({ children, rolePermitido }: PropsRotaProtegida) {
     const { usuario } = useAuth();
 
     if (!usuario) {
-        return <Navigate to='/login' replace />;
+        return <Navigate to='/player' replace />;
     }
 
     if (rolePermitido && usuario.role !== rolePermitido){

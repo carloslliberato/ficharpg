@@ -4,6 +4,50 @@
     box-sizing: border-box;
 }
 
+:root {
+  /* 🌑 Backgrounds (caverna / sombras) */
+  --bg-black-deep: #0B0B0E;
+  --bg-black-purple: #12121A;
+  --bg-purple-dark: #1A1623;
+  --bg-purple-cave: #1F1B2E;
+
+  /* 🟣 Roxo místico (magia / névoa) */
+  --magic-purple-dark: #3A2C5E;
+  --magic-purple: #4B3A7A;
+  --magic-purple-light: #5E4A9E;
+  --magic-purple-glow: #7A65C1;
+
+  /* ✨ Dourado arcano (livro / símbolo) */
+  --arcane-gold-dark: #C9A44C;
+  --arcane-gold: #E6C76E;
+  --arcane-gold-light: #F2D98C;
+  --arcane-gold-glow: #FFDFA3;
+
+  /* 🪵 Pedra / púlpito */
+  --stone-dark: #2A2436;
+  --stone: #342E45;
+  --stone-light: #3F3854;
+
+  /* 📝 Texto */
+  --text-primary: #F2F2F2;
+  --text-secondary: #B5B5C5;
+  --text-muted: rgba(255, 255, 255, 0.6);
+
+
+  --color-primary: #A347FF;
+    --color-secondary: #7000AC;
+    --color-smoky-black: #121212;
+    --color-light-black: #1F1F1F;
+    --color-black: #0a0a0a;
+    --color-dark-gray: #1E1E1E;
+    --color-white: #fff;
+    --color-gray: rgba(255, 255, 255, .1);
+    --color-off-white: rgba(255, 255, 255, .6);
+    --color-red: #d9534f;
+    --color-green: #3d8b40;
+}
+
+
 .body {
     min-height: 100vh;
     padding: 10px;
@@ -12,7 +56,7 @@
     align-items: center;
     gap: 20px;
     justify-content: center;
-    background-image: url(../../public/mobile-background.png);
+    background-image: url(/mobile-background.png);
     background-size: cover;
     background-position: center;
 }
@@ -82,7 +126,7 @@ p {
 .formAuth button {
     width: 50%;
     height: 50px;
-    background-color: #8B6FB3;
+    background-color: var(--magic-purple-light);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -90,7 +134,7 @@ p {
 }
 
     .link {
-        color: #8B6FB3;
+        color: var(--magic-purple-glow);
         transition: background-color 0.4s ease, color 0.4s ease;
 
     }
@@ -116,7 +160,7 @@ p {
         gap: 0;
         align-items: center;
         justify-content: center;
-        background-image: url(../../public/desktop-background.png);
+        background-image: url(/desktop-background.png);
     }
 
     .section {
