@@ -5,6 +5,7 @@ export interface Character {
     nome: string;
     classe: string;
     origem: string;
+    img_perfil: string;
 
     pvMax: number;
     pdMax: number;

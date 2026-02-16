@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import type { Character } from "../types/player/PlayerContext";
-import { StatusCard } from "./StatusCard";
-import { MenuBar } from "../components/MenuBar"; 
+import { Status } from "./Status";
+// import { MenuBar } from "../components/MenuBar"; 
 import { Inventario } from "./Inventario";
+
+import { Home } from "./Home";
 
 export function PlayerArea() {
   const [player, setPlayer] = useState<Character>({
@@ -11,6 +13,7 @@ export function PlayerArea() {
     nome: "Kyoku Shimizu",
     classe: "Ocultista",
     origem: "Acadêmico",
+    img_perfil: "https://i.imgur.com/NSlD8wS.jpg",
     pvMax: 20,
     pdMax: 15,
     pvAtual: 14,
@@ -37,18 +40,15 @@ export function PlayerArea() {
 
   return (
     <div>
-      <MenuBar/>
+      {/* <MenuBar/> */}
 
       <Routes>
         {/* rota padrão */}
-        <Route
-          index
-          element={<StatusCard {...player} onUpdate={handleUpdate} />}
-        />
+        <Route index element={<Home/> }/>
 
         <Route
           path="status"
-          element={<StatusCard {...player} onUpdate={handleUpdate} />}
+          element={<Status {...player} onUpdate={handleUpdate} />}
         />
 
         <Route path="inventario" element={<Inventario />} />

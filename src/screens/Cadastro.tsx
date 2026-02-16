@@ -2,7 +2,7 @@ import type { FormEvent } from "react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../assets/contexts/authContext";
-import './login_cadastro.css'
+import './css/login_cadastro.css'
 
 export function Cadastro() {
     const { loginFake } = useAuth();

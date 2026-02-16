@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import type { ChangeEvent } from "react";
 import type { Character } from "../types/player/PlayerContext";
-import './statuscard.css'
+import './css/statuscard.css'
 
-// import { MenuBar } from "../components/MenuBar";
+import { MenuBar } from "../components/MenuBar";
 
 type StatusProps = Character & {
     onUpdate: (update: Partial<Character>) => void;
 }
 
-export function StatusCard({
+export function Status({
     nome,
     classe,
     origem,
@@ -130,7 +130,7 @@ export function StatusCard({
                 <div className="status-base">
                     <div className="status progress-bar ">
                         <h3>VIDA</h3>
-                        <div className="status-bar status-pv">
+                        <div className="status-bar status-pv" data-max={pvMax} data-percent={((pvAtual / pvMax) * 100).toFixed(0)}>
 
                             <button className="diminui" data-action='decrease' onClick={handleButtonClick('pvAtual')}>
                                 <img src=".././public/seta-direita.png" alt="diminui" className="seta-invertida" />
@@ -160,7 +160,7 @@ export function StatusCard({
 
                     <div className="status progress-bar ">
                         <h3>SANIDADE</h3>
-                        <div className="status-bar status-san">
+                        <div className="status-bar status-san" data-max={sanidadeMax} data-percent={((sanidadeAtual / sanidadeMax) * 100).toFixed(0)}>
                             <button className="diminui"
                                 data-action='decrease'
                                 onClick={handleButtonClick('sanidadeAtual')}>
@@ -187,7 +187,7 @@ export function StatusCard({
 
                     <div className="status progress-bar ">
                         <h3>DETERMINAÇÃO</h3>
-                        <div className="status-bar status-pd">
+                        <div className="status-bar status-pd" data-max={pdMax} data-percent={((pdAtual / pdMax) * 100).toFixed(0)}>
                             <button className="diminui"
                                 data-action='decrease'
                                 onClick={handleButtonClick('pdAtual')}>
@@ -327,6 +327,7 @@ export function StatusCard({
                         />
                     </div>
                 </div>
+                <MenuBar/>
             </div>
         </>
 
